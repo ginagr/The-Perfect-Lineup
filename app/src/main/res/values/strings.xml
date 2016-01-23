@@ -28,7 +28,11 @@
     <string name="add_rower">Add Rower</string>
     <string name="add_coxswain">Add Coxswain</string>
     <string name="add_boat">Add Boat</string>
+    <string name="add_team">Add New Team</string>
     <string name="name">Name: </string>
     <string name="skip">Skip</string>
+    <string name="submit">Submit</string>
+    <string name="add_another_rower">Add Another Rower</string>
+    <string name="add_another_coxswain">Add Another Coxswain</string>
 
 </resources>
