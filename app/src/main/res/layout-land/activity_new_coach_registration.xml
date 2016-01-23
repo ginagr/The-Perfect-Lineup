@@ -131,7 +131,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/add_team"
-        android:id="@+id/button_add_team" />
+        android:id="@+id/button_add_team"
+        android:visibility="gone"/>
 
     <!--Team name prompt and box-->
     <TextView
@@ -153,7 +154,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/add_rower"
-        android:id="@+id/button_add_rower" />
+        android:id="@+id/button_add_rower"
+        android:visibility="gone"/>
 
     <!--Rower first name prompt and box-->
     <TextView
@@ -281,7 +283,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/add_another_rower"
-        android:id="@+id/button_add_another_rower" />
+        android:id="@+id/button_add_another_rower"
+        android:visibility="gone"/>
 
     <!--Add Coxswain Button-->
     <Button
@@ -290,14 +293,16 @@
         android:text="@string/add_coxswain"
         android:id="@+id/button_add_coxswain"
         android:layout_marginLeft="80dp"
-        android:layout_marginStart="80dp" />
+        android:layout_marginStart="80dp"
+        android:visibility="gone"/>
 
     <!--Add Another Coxswain Button-->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/add_another_coxswain"
-        android:id="@+id/button_add_another_coxswain" />
+        android:id="@+id/button_add_another_coxswain"
+        android:visibility="gone"/>
 
     <!--Coxswain first name prompt and box-->
     <TextView
@@ -385,7 +390,7 @@
         android:layout_height="wrap_content"
         android:text="COLOR PROMPT"
         android:id="@+id/textView_color_prompt"
-    />
+        android:visibility="gone"/>
 
     <!--Submit Button-->
     <Button
