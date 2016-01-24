@@ -22,10 +22,16 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="32dp"
         android:text="@string/coach_registration_form"
         android:id="@+id/textView_reg_title"
+<<<<<<< HEAD
         android:layout_above="@+id/textView_coach_fname"
         android:layout_centerHorizontal="false" />
+=======
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+>>>>>>> 51ef31d4d15dc306432913a7e6dcf19194b88d83
 
     <!--Coach first name prompt and box-->
     <TextView
@@ -33,16 +39,31 @@
         android:layout_height="wrap_content"
         android:text="@string/first_name"
         android:id="@+id/textView_coach_fname"
+<<<<<<< HEAD
         android:textSize="14sp"
         android:layout_toLeftOf="@+id/editText_coach_fname"
+=======
+        android:textSize="14dp"
+        android:layout_alignBottom="@+id/editText_coach_fname"
+>>>>>>> 51ef31d4d15dc306432913a7e6dcf19194b88d83
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="14dp"
         android:id="@+id/editText_coach_fname"
+<<<<<<< HEAD
         android:layout_toRightOf="@+id/textView_coach_fname" />
+=======
+
+        android:inputType="text"
+        android:width="500dp"
+        android:layout_below="@+id/textView_coxswain_weight"
+        android:layout_toRightOf="@+id/editText_twok_time"
+        android:layout_toEndOf="@+id/editText_twok_time" />
+>>>>>>> 51ef31d4d15dc306432913a7e6dcf19194b88d83
 
     <!--Coach last name prompt and box-->
     <TextView
@@ -60,8 +81,14 @@
         android:layout_height="wrap_content"
         android:id="@+id/editText_coach_lname"
         android:layout_alignBottom="@+id/textView_coach_lname"
+<<<<<<< HEAD
         android:layout_toLeftOf="@+id/button_add_coxswain"
         android:layout_toStartOf="@+id/button_add_coxswain" />
+=======
+        android:layout_alignLeft="@+id/editText_coach_fname"
+        android:layout_alignStart="@+id/editText_coach_fname"
+        android:inputType="text" />
+>>>>>>> 51ef31d4d15dc306432913a7e6dcf19194b88d83
 
     <!--School/Organization prompt and box-->
     <TextView
@@ -392,7 +419,6 @@
         android:id="@+id/button_submit"
         android:layout_alignParentRight ="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="412dp"
         android:layout_marginTop="62dp" />
 
 
