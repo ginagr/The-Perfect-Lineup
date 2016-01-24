@@ -16,16 +16,29 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login" />
+            android:name=".LoginActivity">
+            android:label="@string/title_activity_login"
+            <intent-filter>
+                <action android:name="com.bignerdranch.android.LOGINACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".RegistrationActivity" />
-        <activity android:name=".NewCoachRegistration" />
-        <activity android:name=".NewTeamRegistration"></activity>
+
+        <activity android:name=".NewCoachRegistration">
+            <intent-filter>
+                <action android:name="com.bignerdranch.action.NEWCOACHREGISTRATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".NewTeamRegistration">
+
+        </activity>
     </application>
 
 </manifest>
