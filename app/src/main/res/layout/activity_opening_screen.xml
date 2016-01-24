@@ -16,8 +16,17 @@
         android:text="Welcome to The Perfect Lineup!"
         android:id="@+id/textView"
         android:textSize="26dp"
-        android:layout_marginTop="158dp"
+        android:layout_marginTop="64dp"
+        android:drawable="@mipmap/mainlogo"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:drawable="@mipmap/mainlogo"/>
+        android:layout_centerHorizontal="true" />
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@mipmap/logo"
+        android:maxWidth="500dp"
+        android:maxHeight="500dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
