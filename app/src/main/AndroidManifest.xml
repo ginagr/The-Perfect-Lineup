@@ -28,17 +28,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegistrationActivity" />
-
-        <activity android:name=".NewCoachRegistration">
-            <intent-filter>
-                <action android:name="com.bignerdranch.action.NEWCOACHREGISTRATION" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".NewTeamRegistration">
-
-        </activity>
+        <activity android:name=".NewCoachRegistration" />
+        <activity android:name=".NewTeamRegistration" />
+        <activity android:name=".OpeningScreen"></activity>
     </application>
 
 </manifest>
