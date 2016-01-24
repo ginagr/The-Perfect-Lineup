@@ -13,7 +13,7 @@
     <string name="error_field_required">This field is required</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions." </string>
-    <string name="coach_registration_form">New Coach Registration Form</string>
+    <string name="coach_registration_form">Coach Registration Form</string>
     <string name="first_name">First name: </string>
     <string name="last_name">Last name: </string>
     <string name="username">Username: </string>
