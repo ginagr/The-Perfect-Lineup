@@ -8,7 +8,9 @@ public class Rower {
     double twokTime, getSixkTime, weight;
     boolean isCoxswain, isStarboard, isPort;
 
-    Rower(String firstName, String lastName )
+    Rower(){
+
+    }
 
 
 }

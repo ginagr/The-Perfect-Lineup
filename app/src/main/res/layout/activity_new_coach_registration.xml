@@ -24,12 +24,8 @@
         android:layout_height="wrap_content"
         android:text="@string/coach_registration_form"
         android:id="@+id/textView_reg_title"
-        android:visibility="gone"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/textView_coach_lname"
-        android:layout_alignLeft="@+id/textView_coach_lname"
-        android:layout_alignStart="@+id/textView_coach_lname" />
+        android:layout_above="@+id/textView_coach_fname"
+        android:layout_centerHorizontal="false" />
 
     <!--Coach first name prompt and box-->
     <TextView
@@ -38,7 +34,7 @@
         android:text="@string/first_name"
         android:id="@+id/textView_coach_fname"
         android:textSize="14sp"
-        android:layout_below="@+id/editText_coach_fname"
+        android:layout_toLeftOf="@+id/editText_coach_fname"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -46,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText_coach_fname"
-        android:layout_toLeftOf="@+id/textView_coach_fname" />
+        android:layout_toRightOf="@+id/textView_coach_fname" />
 
     <!--Coach last name prompt and box-->
     <TextView
@@ -54,20 +50,18 @@
         android:layout_height="wrap_content"
         android:text="@string/last_name"
         android:id="@+id/textView_coach_lname"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="69dp"
-        android:layout_marginStart="69dp"
-        android:visibility="gone"/>
+        android:layout_below="@+id/textView_coach_fname"
+        android:layout_alignRight="@+id/textView_coach_fname"
+        android:layout_alignEnd="@+id/textView_coach_fname"
+        android:layout_marginTop="42dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText_coach_lname"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:visibility="gone"/>
+        android:layout_alignBottom="@+id/textView_coach_lname"
+        android:layout_toLeftOf="@+id/button_add_coxswain"
+        android:layout_toStartOf="@+id/button_add_coxswain" />
 
     <!--School/Organization prompt and box-->
     <TextView
@@ -75,12 +69,9 @@
         android:layout_height="wrap_content"
         android:text="@string/organization"
         android:id="@+id/textView_org_name"
-        android:layout_alignParentTop="true"
+        android:layout_above="@+id/textView_side_prompt"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="69dp"
-        android:layout_marginStart="69dp"
-        android:visibility="gone"/>
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -90,47 +81,6 @@
         android:layout_alignParentStart="true"
         android:visibility="gone"/>
 
-
-    <!--Username prompt and box-->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/username"
-        android:id="@+id/textView_username"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="69dp"
-        android:layout_marginStart="69dp"
-        android:visibility="gone"/>
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText_username"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:visibility="gone"/>
-
-    <!--Password prompt and box-->
-    <!--TODO Password confirmation-->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/prompt_password"
-        android:id="@+id/textView_password_prompt"
-        android:visibility="gone"/>
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/editText_password"
-        android:layout_alignTop="@+id/textView_coach_fname"
-        android:layout_toRightOf="@+id/textView_coach_fname"
-        android:layout_toEndOf="@+id/textView_coach_fname"
-        android:textSize="14dp" />
 
     <!--NEW TEAM SECTION-->
     <!--Add New Team-->
@@ -204,9 +154,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText_rower_lname"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:visibility="gone"/>
+        android:layout_above="@+id/radioButton_port"
+        android:layout_alignRight="@+id/textView_org_name"
+        android:layout_alignEnd="@+id/textView_org_name" />
 
     <!--2K Time prompt and box-->
     <TextView
@@ -214,20 +164,17 @@
         android:layout_height="wrap_content"
         android:text="@string/twok_time"
         android:id="@+id/textView_twok_time"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="69dp"
-        android:layout_marginStart="69dp"
-        android:visibility="gone"/>
+        android:layout_alignTop="@+id/editText_coxswain_weight"
+        android:layout_alignRight="@+id/editText_coxswain_weight"
+        android:layout_alignEnd="@+id/editText_coxswain_weight" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText_twok_time"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:visibility="gone"/>
+        android:layout_above="@+id/editText_rower_lname"
+        android:layout_alignRight="@+id/textView_org_name"
+        android:layout_alignEnd="@+id/textView_org_name" />
 
     <!--6K Time prompt and box-->
     <TextView
@@ -235,19 +182,18 @@
         android:layout_height="wrap_content"
         android:text="@string/sixk_time"
         android:id="@+id/textView_sixk_time"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="69dp"
-        android:layout_marginStart="69dp"
+        android:layout_above="@+id/button_add_coxswain"
+        android:layout_toRightOf="@+id/textView_side_prompt"
+        android:layout_toEndOf="@+id/textView_side_prompt"
         android:visibility="gone"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText_sixk_time"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView_org_name"
+        android:layout_toRightOf="@+id/textView_boat_name"
+        android:layout_toEndOf="@+id/textView_boat_name"
         android:visibility="gone"/>
 
     <!--Side prompt, starboard button, and port button-->
@@ -256,28 +202,29 @@
         android:layout_height="wrap_content"
         android:text="@string/side"
         android:id="@+id/textView_side_prompt"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/radioButton_starboard"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="69dp"
-        android:layout_marginStart="69dp"
-        android:visibility="gone"/>
+        android:layout_alignParentStart="true" />
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/starboard"
         android:id="@+id/radioButton_starboard"
-        android:layout_centerVertical="true" />
+        android:layout_below="@+id/radioButton_port"
+        android:layout_alignLeft="@+id/editText_rower_lname"
+        android:layout_alignStart="@+id/editText_rower_lname" />
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/port"
         android:id="@+id/radioButton_port"
-        android:layout_centerVertical="true"
         android:checked="false"
-        android:visibility="gone"/>
+        android:layout_above="@+id/button_add_another_rower"
+        android:layout_toRightOf="@+id/radioButton_starboard"
+        android:layout_toEndOf="@+id/radioButton_starboard"
+        android:layout_marginBottom="52dp" />
 
     <!--Rower Weight prompt and box-->
     <TextView
@@ -285,19 +232,18 @@
         android:layout_height="wrap_content"
         android:text="@string/weight"
         android:id="@+id/textView_rower_weight"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/radioButton_port"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="69dp"
-        android:layout_marginStart="69dp"
         android:visibility="gone"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText_rower_weight"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView_boat_name"
+        android:layout_toRightOf="@+id/textView_rower_weight"
+        android:layout_toEndOf="@+id/textView_rower_weight"
         android:visibility="gone"/>
 
     <!--Add Another Rower Button-->
@@ -306,7 +252,11 @@
         android:layout_height="wrap_content"
         android:text="@string/add_another_rower"
         android:id="@+id/button_add_another_rower"
-        android:visibility="gone"/>
+        android:layout_alignTop="@+id/button_add_coxswain"
+        android:layout_toLeftOf="@+id/textView_reg_title"
+        android:layout_toStartOf="@+id/textView_reg_title" />
+
+
 
     <!--Add Coxswain Button-->
     <Button
@@ -314,10 +264,12 @@
         android:layout_height="wrap_content"
         android:text="@string/add_coxswain"
         android:id="@+id/button_add_coxswain"
-        android:layout_marginLeft="80dp"
-        android:layout_marginStart="80dp"
-        android:visibility="gone"
-        />
+        android:layout_marginBottom="232dp"
+        android:layout_above="@+id/button_submit"
+        android:layout_alignLeft="@+id/button_add_another_rower"
+        android:layout_alignStart="@+id/button_add_another_rower"
+        android:layout_marginLeft="94dp"
+        android:layout_marginStart="94dp" />
 
     <!--Add Another Coxswain Button-->
     <Button
@@ -325,6 +277,9 @@
         android:layout_height="wrap_content"
         android:text="@string/add_another_coxswain"
         android:id="@+id/button_add_another_coxswain"
+        android:layout_below="@+id/button_add_coxswain"
+        android:layout_toLeftOf="@+id/radioButton_starboard"
+        android:layout_toStartOf="@+id/radioButton_starboard"
         android:visibility="gone"/>
 
 
@@ -334,19 +289,18 @@
         android:layout_height="wrap_content"
         android:text="@string/first_name"
         android:id="@+id/textView_coxswain_fname"
-        android:layout_alignParentTop="true"
+        android:layout_above="@+id/editText_coxswain_weight"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="69dp"
-        android:layout_marginStart="69dp"
         android:visibility="gone"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText_coxswain_fname"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_above="@+id/editText_coxswain_weight"
+        android:layout_toRightOf="@+id/editText_coxswain_weight"
+        android:layout_toEndOf="@+id/editText_coxswain_weight"
         android:visibility="gone"/>
 
     <!--Coxswain last name prompt and box-->
@@ -355,16 +309,18 @@
         android:layout_height="wrap_content"
         android:text="@string/last_name"
         android:id="@+id/textView_coxswain_lname"
-        android:layout_alignTop="@+id/editText_password"
         android:layout_toLeftOf="@+id/button_submit"
-        android:layout_toStartOf="@+id/button_submit" />
+        android:layout_toStartOf="@+id/button_submit"
+        android:layout_alignTop="@+id/editText_password"
+        android:visibility="gone"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText_coxswain_lname"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/textView_sixk_time"
+        android:layout_alignLeft="@+id/radioButton_port"
+        android:layout_alignStart="@+id/radioButton_port"
         android:visibility="gone"/>
 
     <!--Coxswain Weight prompt and box-->
@@ -373,17 +329,17 @@
         android:layout_height="wrap_content"
         android:text="@string/weight"
         android:id="@+id/textView_coxswain_weight"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="69dp"
-        android:layout_marginStart="69dp"
+        android:layout_above="@+id/button_submit"
+        android:layout_marginBottom="50dp"
+        android:layout_alignRight="@+id/textView_coxswain_fname"
+        android:layout_alignEnd="@+id/textView_coxswain_fname"
         android:visibility="gone"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText_coxswain_weight"
+        android:layout_above="@+id/button_add_another_coxswain"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:visibility="gone"/>
@@ -394,8 +350,9 @@
         android:layout_height="wrap_content"
         android:text="@string/add_boat"
         android:id="@+id/button_add_boat"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="120dp" />
+        android:layout_below="@+id/button_add_coxswain"
+        android:layout_toRightOf="@+id/radioButton_port"
+        android:layout_toEndOf="@+id/radioButton_port" />
 
     <!--Boat name prompt and box-->
     <TextView
@@ -403,14 +360,17 @@
         android:layout_height="wrap_content"
         android:text="@string/name"
         android:id="@+id/textView_boat_name"
-        android:layout_marginTop="109dp" />
+        android:layout_marginTop="109dp"
+        android:visibility="gone"
+        />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText_boat_name"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/button_add_boat"
+        android:layout_toRightOf="@+id/textView_color_prompt"
+        android:layout_toEndOf="@+id/textView_color_prompt"
         android:visibility="gone"/>
 
     <!--Boat color prompt-->
@@ -419,6 +379,9 @@
         android:layout_height="wrap_content"
         android:text="COLOR PROMPT"
         android:id="@+id/textView_color_prompt"
+        android:layout_alignBottom="@+id/editText_sixk_time"
+        android:layout_toLeftOf="@+id/textView_reg_title"
+        android:layout_toStartOf="@+id/textView_reg_title"
         android:visibility="gone"/>
 
     <!--Submit Button-->
@@ -432,14 +395,6 @@
         android:layout_marginStart="412dp"
         android:layout_marginTop="62dp" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/editText"
-        android:layout_alignTop="@+id/textView_coxswain_lname"
-        android:layout_toRightOf="@+id/textView_coxswain_lname" />
 
 
 </RelativeLayout>
