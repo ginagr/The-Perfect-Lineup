@@ -25,7 +25,8 @@
             android:label="@string/title_activity_login" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".NewCoachRegistration" />
-        <activity android:name=".NewTeamRegistration"></activity>
+        <activity android:name=".NewTeamRegistration" />
+        <activity android:name=".OpeningScreen"></activity>
     </application>
 
 </manifest>
