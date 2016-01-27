@@ -4,12 +4,12 @@ This is the Develop Branch of the Perfect Lineup. It serves as the base branch f
 
 The Structure is as follows:
 
-<!-- \\0------------master--------------------------------------------------------------------------
+  
+    0------------master--------------------------------------------------------------------------
       \----------develop--------------------------------------------------------------------/-----------
         \            \--feature 2--------------/------------/
          \                                    /
           \-----------------feature 1 -------/
- -->
 
 master: Has periodical, stable releasses (eg. v 1.0.0)
 develop: is the ongoing development branch. Periodically merged with master. All merge conflicts are resolved on this branch. Make sure to fetch often.
