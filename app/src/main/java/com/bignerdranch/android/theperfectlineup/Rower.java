@@ -3,6 +3,7 @@ package com.bignerdranch.android.theperfectlineup;
 /**
  * Created by Maryann on 1/23/16.
  */
+
 public class Rower extends Athlete{
     String firstName, lastName;
     double twokTime, sixkTime, weight;

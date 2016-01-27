@@ -6,7 +6,7 @@ import android.app.Activity;
 
 
 public class MainActivity extends Activity {
-    private final boolean DATA_FOUND = false;
+    private final boolean DATA_FOUND = true;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

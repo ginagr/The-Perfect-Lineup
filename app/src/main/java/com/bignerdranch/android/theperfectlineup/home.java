@@ -15,20 +15,18 @@ import android.widget.LinearLayout;
 
 public class home extends AppCompatActivity {
 
-    private int numOfRowers = 8;        //TODO fill with roster data
-    private TextView[] rowers = new TextView[numOfRowers];  //TODO add textView to portrower obj
+    private int numOfRowers = 10;        //TODO fill with roster data
+    private TextView[] portRowers = new TextView[numOfRowers];  //TODO add textView to portrower obj
+    private TextView[] starRowers = new TextView[numOfRowers];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-//        TextView first = (TextView) findViewById(R.id.firstRower);
-//        first.setOnTouchListener(new ChoiceTouchListener());
-
         addRowers();
 
-        addBoat();
+        addBoat();TextView temp = new TextView(this);
     }
 
     public void addRowers()
@@ -40,13 +38,15 @@ public class home extends AppCompatActivity {
 
         for (int i = 0; i < numOfRowers; i++)
         {
-            rowers[i] = new TextView(this);     //TODO initialize in portrower object
-            rowers[i].setText("Rower " + i);    //TODO change i to name attribute
-            rowers[i].setBackgroundResource(R.drawable.portrower);
-            rowers[i].setWidth(450);
-            rowers[i].setHeight(250);
-            rowers[i].setOnTouchListener(new ChoiceTouchListener());
-            layout.addView(rowers[i]);
+            portRowers[i] = new TextView(this);     //TODO initialize in portrower object
+            portRowers[i].setText("Rower " + i);    //TODO change i to name attribute
+            portRowers[i].setBackgroundResource(R.drawable.portrower);
+            portRowers[i].setTextSize(1, 35);
+            portRowers[i].setWidth(450);
+            portRowers[i].setHeight(250);
+            portRowers[i].setMaxLines(2);
+            portRowers[i].setOnTouchListener(new ChoiceTouchListener());
+            layout.addView(portRowers[i]);
         }
 
         LinearLayout layout2 = (LinearLayout)findViewById(R.id.starboardRowerLinearLayout);
@@ -54,13 +54,15 @@ public class home extends AppCompatActivity {
 
         for (int i = 0; i < numOfRowers; i++)
         {
-            rowers[i] = new TextView(this);     //TODO initialize in portrower object
-            rowers[i].setText("Rower " + i);    //TODO change i to name attribute
-            rowers[i].setBackgroundResource(R.drawable.starboardrower);
-            rowers[i].setWidth(450);
-            rowers[i].setHeight(250);
-            rowers[i].setOnTouchListener(new ChoiceTouchListener());
-            layout2.addView(rowers[i]);
+            starRowers[i] = new TextView(this);     //TODO initialize in portrower object
+            starRowers[i].setText("Rower " + i);    //TODO change i to name attribute
+            starRowers[i].setTextSize(1, 30);
+            starRowers[i].setBackgroundResource(R.drawable.starboardrower);
+            starRowers[i].setWidth(450);
+            starRowers[i].setHeight(250);
+            starRowers[i].setMaxLines(3);
+            starRowers[i].setOnTouchListener(new ChoiceTouchListener());
+            layout2.addView(starRowers[i]);
         }
     }
 
@@ -68,34 +70,35 @@ public class home extends AppCompatActivity {
     {
         LinearLayout layout = (LinearLayout)findViewById(R.id.boatLinearLayout);
         layout.setScrollContainer(true);
-        for (int i = 0; i < 9; i++)
-        {
             TextView temp = new TextView(this);
-            if(i == 0){
-                temp.setText("Coxswain");
-                temp.setBackgroundResource(R.drawable.cox);
-                temp.setWidth(450);
-                temp.setHeight(200);
-                temp.setOnDragListener(new ChoiceDragListener());
-                layout.addView(temp);
-            }
-            else {
-                if (i % 2 == 0) {
+            temp.setText("Coxswain");
+            temp.setTextSize(1, 35);
+            temp.setBackgroundResource(R.drawable.cox);
+            temp.setWidth(250);
+            temp.setHeight(150);
+            temp.setOnDragListener(new ChoiceDragListener());
+            layout.addView(temp);
+            for (int i = 8; i > 0; i--)
+            {
+                temp = new TextView(this);
+            if (i % 2 == 0) {
                     temp.setText("" + i);
                     temp.setBackgroundResource(R.drawable.starboardrower_shadow);
                     temp.setHeight(250);
+                    temp.setTextSize(1, 35);
                     temp.setOnDragListener(new ChoiceDragListener());
                     layout.addView(temp);
                 } else {
                     temp.setText("" + i);
                     temp.setBackgroundResource(R.drawable.portrower_shadow);
                     temp.setHeight(250);
+                    temp.setTextSize(1, 35);
                     temp.setOnDragListener(new ChoiceDragListener());
                     layout.addView(temp);
                 }
             }
         }
-    }
+
 
     private final class ChoiceTouchListener implements OnTouchListener {
 
@@ -137,12 +140,15 @@ public class home extends AppCompatActivity {
                     TextView dropped = (TextView) view;
                     //update the text in the target view to reflect the data being dropped
                     dropTarget.setText(dropped.getText());
-//                    if(Integer.parseInt((String)dropped.getText()) % 2 == 0){
-//                        dropTarget.setBackgroundResource(R.drawable.starboardrower);
-//                    }
-//                    else {
+                  //  String temp = dropped.getText().toString();
+                   // temp = temp.charAt(temp.length()-1);
+                  //  int temp2 = Integer.parseInt(temp);
+                    if(dropped.getMaxLines() == 2){
                         dropTarget.setBackgroundResource(R.drawable.portrower);
-           //         }
+                    }
+                    else {
+                        dropTarget.setBackgroundResource(R.drawable.starboardrower);
+                   }
                     dropTarget.setHeight(202);
                     dropTarget.setWidth(20);
                     dropTarget.setPaddingRelative(0, 0, 0, 0);
